@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Traversing</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                $("#btn").parentsUntil("h1").css({ "font-size": "45px", "color": "yellow" });
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <h1>kushal</h1>
+    <p>hello world</p>
+    <p>Jello oifdd</p>
+    <button id="btn">Try this</button>
+</body>

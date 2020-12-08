@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Events</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        /*$(document).ready(function () {
+            $("p").dblclick(function () {
+                $(this).hide();
+            });
+        });*/
+
+        /*$(document).ready(function () {
+
+            $("#p1").mouseenter(function () {
+                alert("you pressed pragraph")
+
+            });
+
+        });*/
+
+
+        $(document).ready(function () {
+
+            $("#p1").mouseleave(function () {
+                alert("you relaesed pragraph")
+
+            });
+
+        });* /
+
+        $(document).ready(function () {
+            $("input").focus(function () {
+                $(this).css("background-color", "blue");
+            });
+
+            $("input").blur(function () {
+                $(this).css("background-color", "green");
+
+            });
+
+        });
+
+
+
+        //we can use mouseup and mousedown functions also //
+
+
+    </script>
+
+<body>
+    <!--<p id="p1">kushal</p>
+    <p id="p1">hello</p>
+    <p>jhoirhrfv</p>-->
+    <label for="input">Input</label>
+    <input type="text" class="input" name="name">
+    <input type="email" class="email" name="email">
+</body>
+
+</head>

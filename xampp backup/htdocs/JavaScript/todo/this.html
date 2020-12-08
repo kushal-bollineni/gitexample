@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<head>
+    <title>about this keyword</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <button id="btn">Try this</button>
+    <script>
+        //in normal functions this represents the object which called the function it  might be button ,window , or object
+        //in arrow functions this keyword represents the object which defines the arrow function , not which called that function//
+        //normal functions 
+        var hello;
+        hello = function () {
+            document.getElementById("demo").innerHTML = this;
+        }
+        document.getElementById("btn").addEventListener("click", hello);
+
+
+        //try with arrow functions//
+
+        var hello;
+        hello = () => {
+            document.getElementById("demo").innerHTML = this;
+        }
+        document.getElementById("btn").addEventListener("click", hello);
+//in arrow functions binding of this was different , here arrow function was defined by hello object window
+
+
+    </script>
+</body>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Callbacks</title>
+</head>
+
+<body>
+
+    <p id="demo"></p>
+
+
+
+    <script>
+        //callback means passing one function as an argumewnt to other function
+        //it means when we want that one function to execute first before second one we can use this call backs//
+
+        function display(result) {
+            return "The result was " + result;
+        }
+
+        function sum(x, y) {
+            return x + y;
+        }
+
+        let str = display(sum(5, 7));
+
+        //here we are passing one function as arument to this function so trhat will execute first,then this one so
+        //this function cant execute if that was  not executed indirectly prioritize the functions
+        document.getElementById("demo").innerHTML = str;
+    </script>

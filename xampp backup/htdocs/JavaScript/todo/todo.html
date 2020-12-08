@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lan="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>TODOS-APP</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col" id="colinput">
+                <div class="title">
+                    <p class="title1">To-do App</p>
+                    <p class="title2">What do you need to do?</p>
+                </div>
+
+                <div class="inputs">
+                    <div class="todoinputs">
+                        <input id="filtertodo" class="input" type="text" placeholder="  Filter Todos" maxlength="8">
+                        <label class="checkbox">
+                            <input id="hidecheckbox" type="checkbox" onclick="check()">Hide Completed
+                        </label>
+                        <label class="checkbox" style="margin-left: 12px;">
+                            <input id="selectcheckbox" type="checkbox" onclick="selectall()">select all
+                        </label>
+                    </div>
+                </div>
+
+                <div class="forminput">
+                    <div id="Result">
+
+                        <p>You Have 0 Todos Left</p>
+
+
+
+                    </div>
+                    <div id="Display">
+                        <table id="myTable">
+                        </table>
+
+                        <table id="myTable1">
+                        </table>
+
+                        <table id="myTable2">
+                        </table>
+
+
+                    </div>
+                    <form id="todoform">
+                        <input type="text" class="input1" placeholder="  New Todo" name="inserttudo" maxlength="8"
+                            onkeypress="myFunction(event)">
+                        <button type="button" class="button" onclick="insertvalues();">Submit</button>
+                    </form>
+                </div>
+                <p id="recent"></p>
+                <p id="first"></p>
+                <p id="message"></p>
+                <script src="todofunctions.js"></script>
+                <script src="todoapp.js"></script>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

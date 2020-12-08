@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Query</title>
+</head>
+
+<body>
+    <div id="my">
+        <p></p>
+        <p></p>
+    </div>
+
+    <div id="myDIV">
+        <p>This is a p element in div.</p>
+        <p>This is also a p element in div.</p>
+    </div>
+    <script>
+        /*let x = document.getElementById("my")
+        x.querySelector("p").innerHTML = "hello";*/
+
+        //queryselector will searhc for first instance where its find and it make changes in that place , it wont check
+        //next condition
+
+        myFunction();
+        function myFunction() {
+            var x = document.getElementById("myDIV").querySelectorAll("p");
+            x[1].style.backgroundColor = "red";
+        }
+        //we can access both p s in mydiv if it was with queryselectorall
+
+        document.getElementById("myDIV").remove();
+
+    </script>
+</body>

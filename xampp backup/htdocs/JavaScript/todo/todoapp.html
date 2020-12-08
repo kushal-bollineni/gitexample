@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="deletestyle.css">
+</head>
+
+<body>
+    <ul id="myUL">
+    </ul>
+
+    <div id="myDIV" class="header">
+        <h2 style="margin:5px">To Do List</h2>
+        <input type="text" id="myInput" placeholder="Write Here...">
+        <span onclick="newElement()" class="addBtn">Add</span>
+    </div>
+
+
+
+    <script>
+
+        var myNodelist = document.getElementsByTagName("LI");
+        var i;
+        for (i = 0; i < myNodelist.length; i++) {
+            var span = document.createElement("SPAN");
+            var txt = document.createTextNode("remove");
+            span.className = "close";
+            span.appendChild(txt);
+            myNodelist[i].appendChild(span);
+        }
+
+
+        var close = document.getElementsByClassName("close");
+        var i;
+        for (i = 0; i < close.length; i++) {
+            close[i].onclick = function () {
+                var div = this.parentElement;
+                div.style.display = "none";
+            }
+        }
+
+
+        /*var list = document.querySelector('ul');
+        list.addEventListener('click', function (ev) {
+            if (ev.target.tagName === 'LI') {
+                ev.target.classList.toggle('checked');
+            }
+        }, false);*/
+
+
+
+
+        function newElement() {
+            var li = document.createElement("li");
+            var inputValue = document.getElementById("myInput").value;
+            var t = document.createTextNode(inputValue);
+            li.appendChild(t);
+            if (inputValue === '') {
+                alert("User Input Required!");
+            } else {
+                document.getElementById("myUL").appendChild(li);
+            }
+            document.getElementById("myInput").value = "";
+
+            var span = document.createElement("SPAN");
+            var txt = document.createTextNode("remove");
+            span.className = "close";
+            span.appendChild(txt);
+            li.appendChild(span);
+
+            for (i = 0; i < close.length; i++) {
+                close[i].onclick = function () {
+                    var div = this.parentElement;
+                    div.style.display = "none";
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>
+
+
+// var len = document.getElementById("myTable").children[0].childElementCount;
+//console.log(len);
+
+
+
+
+if (term != "") {
+/*for (var p = 0; p < tudos.length; p++) { if (tudos[p].search(term)==-1) { myTable.style.display="none" ; }*/ /*else {
+    /*filter.push(tudos[i]); for (var q=0; q < filter.length; i++) { table(filter[i]); }*/ /* for (i=0; i < tr.length;
+    i++) { td=tr[i].getElementsByTagName("td")[1]; if (td) { txtValue=td.textContent || td.innerText; if
+    (txtValue.toLowerCase().indexOf(term)> -1) {
+
+    tr[i].style.display = "";
+
+    } else {
+    tr[i].style.display = "none";
+    myTable.style.display = "none"
+    }
+    }
+    }
+
+    //table2(tudos[p]);
+    //myTable.style.display = "none";
+    // myTable2.style.display = "block";
+
+    }*/
+    }
+    else {
+    for (var s = 0; s < (tudos.length); s++) { table(tudos[s]); } } }

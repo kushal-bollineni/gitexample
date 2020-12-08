@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Let</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <script>
+        hello();
+        //let have block scope
+        function hello() {
+            let x = 7;
+            document.getElementById("demo").innerHTML = x;
+        }
+
+        document.getElementById("demo1").innerHTML = x;
+
+        //redeclaring a varibale with var can create problems
+        //if we declare 6 outside a function and redclare that as 5 inside thew function it will become 5 outside of the function
+        //also to avoid this create variables with let because let have block scope , it doesnt reassign the value outside 
+        //the function
+        //redeclaring the var variable with let is not allowed in any scope
+
+        //redeclaring with let variable with let also not alloweed
+
+        //redeclaring a let variable outside and inside was allowed 
+
+
+
+    </script>
+</body>

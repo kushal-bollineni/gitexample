@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<head>
+    <title>callbacks</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        /*$(document).ready(function () {
+            $("button").click(function () {
+                $("p").hide("slow", function () {
+                    alert("Paragraph was hidden");
+                });
+            });
+        });*/
+
+        /*$(document).ready(function () {
+            $("button").click(function () {
+                $("p").css("color", "red").slideUp(2000).slideDown(2000);
+            });
+        });*/
+
+        //chaining allows us to do multiple actions on one element by appending the pervois action on element
+
+
+        /*$(document).ready(function () {
+            /*$("#btn1").click(function () {
+                alert("Text :" + $("#test").text());
+            })
+
+            $("#btn2").click(function () {
+                alert("value :" + $("#input").val());
+            })
+
+        })*/
+
+
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                $("#test1").text("Hello world!");
+            });
+            $("#btn2").click(function () {
+                $("#test2").html("<b>Hello world!</b>");
+            });
+            $("#btn3").click(function () {
+                $("#test3").val("kushal");
+            });
+        });
+
+
+
+    </script>
+</head>
+
+<!--<button>try this</button>
+<p>Hello kushal</p>-->
+
+<body>
+
+    <!--<p id="test">This is some <b>bold</b> text in a paragraph.</p>
+
+    <button id="btn1">Show Text</button>
+    <button id="btn2">Show HTML</button>
+    <input type="text" id="input">-->
+
+    <p id="test1">This is a paragraph.</p>
+    <p id="test2">This is another paragraph.</p>
+
+    <p>Input field: <input type="text" id="test3"></p>
+
+    <button id="btn1">Set Text</button>
+    <button id="btn2">Set HTML</button>
+    <button id="btn3">Set Value</button>
+
+</body>

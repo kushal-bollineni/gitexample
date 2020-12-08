@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<head>
+    <title>jquery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+
+        /*function myfunction() {
+            $("*").hide();
+        }*/
+
+        /* $(document).ready(function () {
+             $("button").click(function () {
+ 
+                 //$("*").hide();
+                 //$(this).hide();
+                 $("p:first").hide();
+ 
+             });
+ 
+         });*/
+
+        /*$(document).ready(function () {
+            $("button").click(function () {
+                $("[href]").hide();
+                $("h1").hide();
+            });
+
+        });*/
+
+        /*$(document).ready(function () {
+            $("button").click(function () {
+                $("a[target =_blank]").hide();
+            });
+        });*/
+
+        $(document).ready(function () {
+            $("button").click(function () {
+
+                $("h1").css("background-color", "yellow");
+                $("p:first").hide();
+            });
+
+        });
+
+
+
+
+    </script>
+</head>
+
+<body>
+    <h1>kushal</h1>
+    <p>this is paragraph</p>
+    <p>this is jquery</p>
+    <button type="button">Click this</button>
+    <p><a href="https://www.w3schools.com/html/" target="_blank">HTML Tutorial</a></p>
+    <p><a href="kushal.com">Hello</a></p>
+
+
+</body>
+
+</html>

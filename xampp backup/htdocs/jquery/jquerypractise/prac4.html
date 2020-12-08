@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<head>
+    <title>effects</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        /*$(document).ready(function () {
+
+            $("#hide").click(function () {
+                $("p").hide(2000);
+            });
+
+            $("#show").click(function () {
+                $("p").show(2000);
+            });
+        });*/
+
+        /*$(document).ready(function () {
+            $("#button").click(function () {
+                $("p").toggle(2000);
+            })
+        })*/
+
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("#div1").fadeToggle();
+                $("#div2").fadeToggle("slow");
+                $("#div3").fadeToggle(6000);
+            });
+        });
+
+
+        //can use fadeeout , faedetoggle also
+        //using fadeout we can set opacity feature also
+        //$("#div3").fadeTo("slow" , 0.43);
+
+
+    </script>
+</head>
+
+<body>
+
+    <!--<button id="hide">Hide</button>
+    <button id="show">Show</button>-->
+
+
+    <div id="div1" style="width:80px;height:80px;background-color:red;">hii</div><br>
+    <div id="div2" style="width:80px;height:80px;background-color:green;">kusghal</div><br>
+    <div id="div3" style="width:80px;height:80px;background-color:blue;">tell</div>
+
+    <button id="button">Try this</button>
+
+</body>

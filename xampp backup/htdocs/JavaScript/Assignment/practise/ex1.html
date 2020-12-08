@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<head>
+    <title>promises</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <script>
+        function display(txt) {
+            document.getElementById("demo").innerHTML = txt;
+        }
+        let mypromise = new Promise(function (resolve, unresolve) {
+            let x = 0;
+            x = 4;
+            if (x == 4) {
+                resolve("four");
+            }
+            else {
+                unresolve("not fpour");
+            }
+
+        });
+
+        mypromise.then(
+            function (value) { display(value); },
+            function (value) { display(value); }
+        );
+    </script>
+</body

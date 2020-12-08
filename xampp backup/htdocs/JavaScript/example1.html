@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<head>
+    <title>JavaScript</title>
+</head>
+
+<body>
+    <h1>kushal</h1>
+    <p id="demo"></p>
+    <button type="button" onclick="myfunction()">Try me</button>
+    <script>
+        function myfunction() {
+            var txt = "kushal was in BANGALORE";
+            //var txt1 = txt.replace(/bangalore/i, "piler");
+            var txt1 = /s/g;
+            var result = txt.match(txt1);
+            document.getElementById("demo").innerHTML = result;
+        }
+
+    </script>
+
+</body>
+
+</html>

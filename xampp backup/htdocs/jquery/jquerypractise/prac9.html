@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<head>
+    <title>
+        Css classes
+    </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                //$("h1 ,h2 ,p").addClass("blue");
+                //$("h1 ,h2,p").removeClass("blue");
+                //also add multiple class properties to that like .addclass("blue green") ,same for remove as well
+                $("h1 ,h2,p").toggleClass("blue");
+            });
+        });
+
+    </script>
+    <style>
+        .blue {
+            color: green;
+            font-size: 34px;
+            font-weight: bold;
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Kushal</h1>
+    <h2>hello</h2>
+    <p>heleowow</p>
+    <p>Kushjakala</p>
+    <div>Kushal was in bangalore</div>
+    <button id="btn">Try this</button>
+</body>

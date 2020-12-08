@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<head>
+    <title>childnodes and children </title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <div id="my">
+        <p>hii</p>
+        <p>hello</p>
+    </div>
+    <script>
+        //whitespaces inside are also considered as nodes and comments are also considered as text so they are aslo nodes
+        //length property will give length
+        //childnodes[0] was equla to firstchild()
+        func();
+
+        /*function func() {
+            let x = document.getElementById("my").children.length;
+            document.getElementById("demo").innerHTML = x;
+        }*/
+
+
+        //children property ignores the comments and whitespaces 
+        //it considers only nodes inside elements
+
+        function func() {
+            let x = document.getElementById("my").parentNode.nodeName;
+            document.getElementById("demo").innerHTML = x;
+        }
+
+
+
+    </script>
+</body>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lan="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <title>TODOS-APP</title>
+    <style>
+        body {
+            background-color: #353239;
+        }
+
+        li {
+            text-align: center;
+            color: white;
+        }
+
+        button {
+            text-align: center;
+            margin-left: 575px;
+            border-radius: 5px;
+            background-color: #7044a0;
+            width: 300px;
+            height: 50px;
+            margin-top: 30px;
+            font-size: 30px;
+            display: none;
+
+        }
+
+        button:hover {
+            background-color: #5F3A87;
+
+        }
+
+        p {
+            text-align: center;
+            color: white;
+            font-size: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-weight: bold;
+            text-decoration: underline;
+            color: white
+        }
+
+        h2 {
+            margin-left: 150px;
+            color: white
+        }
+
+        .checked {
+            text-align: center;
+            margin-left: 100px;
+            background-color: #353239;
+        }
+
+        .txt {
+            color: white
+        }
+
+        .total {
+            border: 3px solid #7044a0;
+            border-radius: 5px;
+            margin-top: 2px;
+            padding-bottom: 325px;
+        }
+
+        a {
+            color: white;
+        }
+
+        a:hover {
+            color: white;
+        }
+
+        .heading {
+            background-color: #6F439C;
+            height: 70px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="total">
+        <div class="heading">
+            <h1>WELCOME TO TO-DO APP</h1>
+        </div>
+        <p>Instructions are given Below</p>
+        <ul style="list-style-type:none;">
+            <li>1.User can place multiple Records</li>
+            <li>2.User can delete any todo record at any time</li>
+            <li>3.User can do searching of items which are already in todo app</li>
+            <li>4.User can Hide elements and unhide at anytime</li>
+        </ul>
+
+        <h2>After Reading instructions ,Click the Below Button to Enter into To-do App</h2>
+        <div class="checked">
+            <input type="checkbox" name="checkbox" id="checkbox" onclick="check()">
+            <span class="txt">click this checkbox to get Button to
+                start</span>
+            <br>
+        </div>
+        <p id="demo">
+
+        </p>
+        <script>
+            function check() {
+                var check2 = document.getElementById("checkbox");
+                if (check2.value == -1) {
+                    button.style.display = "none";
+
+                }
+                else {
+                    button.style.display = "block";
+                }
+                check2.value = ~(check2.value);
+            }
+
+
+        </script>
+        <button type="button" class="button" id="button"><a href="todo.html">
+                Start</button>
+    </div>
+</body>

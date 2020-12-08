@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Quiz Application</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+
+<body>
+    <div id="quizcontainer" class="container">
+        <p id="countdown"></p>
+        <script src="timer.js"></script>
+
+        <div class="title">ITT Quiz</div>
+        <div id="question" class="question"></div>
+        <label class="option"><input type="radio" name="option" value="1" id="1"><span id="opt1"></span></label>
+        <label class="option"><input type="radio" name="option" value="2" id="2"><span id="opt2"></span></label>
+        <label class="option"><input type="radio" name="option" value="3" id="3"><span id="opt3"></span></label>
+        <label class="option"><input type="radio" name="option" value="4" id="4"><span id="opt4"></span></label>
+        <button id="nextbutton" class="next-btn" onclick="loadnextquestion();">Next</button>
+        <button id="prevbutton" class="prev-btn" onclick="loadprevquestion();">Prev</button>
+        <button id="finishbutton" class="finish-btn" onclick="finish();">Submit Quiz</button>
+    </div>
+    <div id="result" class="result" style="display:none;">
+    </div>
+    <p id="demo"></p>
+    <p id="output"></p>
+    <script src="question.js"></script>
+    <script src="quiz-script.js"></script>
+    <script>
+        function loadTableData(displayvalues, values, questions) {
+            var table1 = document.getElementById("text");
+            for (var i = 0; i < values.length; i++) {
+                console.log(values);
+                let k = values[i];
+                let x = "option" + k;
+
+                let y = questions[i]["option" + k];
+                console.log(y);
+                var row = `<tr>
+                    <td>${i + 1}</td>
+                    <td>${displayvalues[i]}</td>
+                    <td>${y}</td>
+                    </tr>`
+
+                table1.innerHTML += row;
+            }
+
+        }
+    </script>
+
+    <table id="myTable" class="table" style="display:none">
+        <tr>
+            <th>S.No:</th>
+            <th>Correct Answers</th>
+            <th>User Selected Answers</th>
+        </tr>
+        <tbody id="text"></tbody>
+    </table>
+    <button id="reload" class="load-btn" style=display:none; onclick="loadagain();">Attempt The Quiz Again</button>
+</body>

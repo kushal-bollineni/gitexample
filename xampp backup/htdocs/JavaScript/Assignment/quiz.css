@@ -1,0 +1,164 @@
+
+body{
+    font-family : serif;
+    background :white;
+}
+
+.container{
+    height : 330px;
+    width : 1000px;
+    position : absolute;
+    top :50%;
+    left :50%;
+    transform : translateX(-50%) translateY(-50%);
+    background : rgba(255,255,255,0.5);
+    padding : 20px;
+    border : 1px solid #08038c;
+    border-radius : 10px;
+    /*box-shadow : 0 0 8px 3px #fff;*/
+
+}
+
+.title{
+    padding-top: 20px;
+    text-align: center;
+    font-size: 36px;
+    text-transform: uppercase;
+    color :  black;
+    margin-left : 80px;
+    margin-top : -8px;
+
+}
+
+.question{
+    padding : 20px;
+    font-size: 22px;
+    background: grey;
+    border-radius: 20px;
+    margin : 10px 0 10px 0;
+    color : #f6f6f6;
+}
+
+.option{
+    width : 470px;
+    display : inline-block;
+    padding : 10px 0 10px 15px;
+    vertical-align: middle;
+    background: rgba(255,255,255,0.5);
+    margin : 10px 0 10px 10px;
+    color : #000000;
+    border-radius: 20px;
+}
+.option:hover{
+    background: grey;
+    color : #f6f6f6;
+}
+
+.next-btn{
+    border : none;
+    outline : none;
+    background : rgba(255,255,255,0.5);
+    width : 100px;
+    height : 35px;
+    border-radius: 20px;
+    cursor : pointer;
+    float : right;
+    margin: 10px;
+}
+
+.next-btn:hover{
+    background:grey;
+    color : #f6f6f6;
+
+}
+.result{
+    height : 100px;
+    text-align: center;
+    font-size: 40px;
+}
+
+.option input:checked.option{
+    background: #08038c;
+    color : black;
+
+}
+.load-btn{
+     border : none;
+    outline : none;
+    background : rgba(255,255,255,0.5);
+    width : 300px;
+    height : 55px;
+    border-radius: 20px;
+    cursor : pointer;
+    font-size : 20px;
+    margin-top : 150px;
+    margin-left : 500px;
+
+}
+.load-btn:hover{
+    background: grey;
+    color : #f6f6f6;
+}
+
+.prev-btn{
+    border : none;
+    outline : none;
+    background : rgba(255,255,255,0.5);
+    width : 100px;
+    height : 35px;
+    border-radius: 20px;
+    cursor : pointer;
+    float : left;
+    margin: 10px;
+}
+
+.prev-btn:hover{
+    background: grey;
+    color : #f6f6f6;
+
+}
+
+.finish-btn{
+    border : none;
+    outline : none;
+    background : rgba(255,255,255,0.5);
+    width : 100px;
+    height : 35px;
+    border-radius: 20px;
+    cursor : pointer;
+    /*float : left;*/
+    margin-top: 10px;
+    margin-left : 450px;
+}
+
+.finish-btn:hover{
+    background: grey;
+    color : #f6f6f6;
+
+}
+#countdown{
+    display : inline-flex;
+    font-size: 25px;
+    margin : 0;
+    height : 25px;
+    width : 165px;
+    background: grey;
+    color : #f6f6f6;
+    float : right;
+}
+
+#demo{
+    font-size: 25px;
+    text-align: center;
+    margin-top : -5px;
+
+}
+table,th,td{
+    border : 3px solid grey;
+    width : 300px;
+    margin-left : 500px;
+    border-collapse: collapse;
+    font-size : 20px;
+    margin-right : 10px;
+    
+}

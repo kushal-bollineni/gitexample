@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Hoisting in js</title>
+</head>
+
+<body>
+    <p id="demo">
+    </p>
+    <script>
+        //hoisting means moving declarations to the top //
+        //we can use a vraiable before its declraed //
+        //we can declrae value after using that //
+
+        x = 6;
+        //document.getElementById("demo").innerHTML = x;
+        var x;
+
+        //varaibles defined with let and const moves to top of block , but not initailzed
+
+        z = 8;
+        document.getElementById("demo").innerHTML = z;
+
+        //z was declraed but not initialzed because it was let type
+
+        let z;
+
+
+    </script>
+</body>

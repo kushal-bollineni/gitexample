@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<head>
+    <title>javascript</title>
+</head>
+
+<body>
+    <input type="text" id="demo"><br><br>
+    <button type="button" onclick="myfunction()">Try Me</button>
+    <p id="txt"></p>
+
+    <script>
+        function myfunction() {
+            var message, x;
+            message = document.getElementById('txt');
+            message.innerHTML = "";
+            x = document.getElementById("demo").value;
+            try {
+                /*if (x == "") throw "empty";
+                if (x == NaN) throw " Not a number";*/
+                x = String(x);
+                if (x.length > 10) throw "large";
+                if (x.length < 2) throw "no";
+            }
+            catch (err) {
+                message.innerHTML = "The input was " + err;
+            }
+        }
+    </script>
+
+
+</body>

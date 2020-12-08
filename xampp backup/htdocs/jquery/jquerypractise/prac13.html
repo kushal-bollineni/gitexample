@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        /* $(document).ready(function () {
+             $("#myInput").on("keyup", function () {
+                 var value = $(this).val().toLowerCase();
+                 $("#myTable tr").filter(function () {
+                     $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                 });
+             });
+         });*/
+
+
+        $(document).ready(function () {
+            $("#myInput").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $("#myTable tr").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+
+        //toggle in filter function hides the elements which does nt matches the searhc pattern
+
+    </script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+
+    <input id="myInput" type="text" placeholder="Search..">
+    <br><br>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+
+
+        <tbody id="myTable">
+            <tr>
+                <td>kushal</td>
+                <td>b</td>
+                <td>john@example.com</td>
+            </tr>
+            <tr>
+                <td>hello</td>
+                <td>hii</td>
+                <td>mary@mail.com</td>
+            </tr>
+            <tr>
+                <td>bnfjfj</td>
+                <td>jhur</td>
+                <td>july@greatstuff.com</td>
+            </tr>
+            <tr>
+                <td>fiohr</td>
+                <td>giherg</td>
+                <td>a_r@oirehgoi.com</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+</body>
+
+</html>

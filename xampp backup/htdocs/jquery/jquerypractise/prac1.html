@@ -1,0 +1,38 @@
+<!--jquery greatly  simplifies javascript programming
+//purpose of jquery is to make much easier to use javascript in your website
+//light weight : write less do more
+//html dom manipulation
+//css manipulation
+//events
+//ajax
+//effects and animations
+//utilities
+//with jquery query html elements and perfomrs actions on them 
+// syntax was $(selector).action()-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("p").hide();
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <h2>This is a heading</h2>
+
+    <p>This is a paragraph.</p>
+    <p>This is another paragraph.</p>
+
+    <button>Click me</button>
+
+</body>
+
+</html>

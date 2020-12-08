@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<head>
+    <title>jspromises</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <script>
+        /*Improves Code Readability
+            Better handling of asynchronous operations
+            Better flow of control definition in asynchronous logic
+            Better Error Handling*/
+
+        //producing code can  take some time
+        //consuming code must wait for result//
+
+        //promise is a js object that creates links between producing and consuming code//
+
+
+        //pending ,fullfilled and rejected //
+        //based upon the result it should call only one callback //
+
+        //promise object is pending result was undefines //
+        //when it was fullfilled ,the result was a value//
+        //when it was rejected ,the result was a error object//
+
+        function display(value) {
+            document.getElementById("demo").innerHTML = value;
+        }
+
+
+        let mypromise = new Promise(function (resolve, reject) {
+            let y = 7;
+
+            if (y == 7) {
+                resolve("OK");
+            }
+            else {
+                reject("error")
+            }
+
+        });
+        //here two callbacks are there but only one will be called based on producing code result 
+        //consuming code will call only one function based on result
+        mypromise.then(
+            function (value) {
+                display(value);
+            },
+            function (error) {
+                display(error)
+            }
+        );
+    </script>
+</body>

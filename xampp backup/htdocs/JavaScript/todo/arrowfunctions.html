@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Arrow functions</title>
+</head>
+<p id="demo">
+</p>
+
+<script>
+    //Arrow functions were introduced in es6 and provides shorter syntax when compared to normal functions //
+    hello = () => {
+        return "Hello world";
+    }
+
+    //No need to put braces and give return option if there is only one return statement //
+
+    hello = () => "Hello world2";
+
+
+    //if there is only one argument also no need to put parenthesis and return statement//
+
+    hello = value => "Hello " + value;
+
+    //even if we remove parenthesis around argument also it works only in one argument condition //
+
+    document.getElementById("demo").innerHTML = hello();
+    document.getElementById("demo").innerHTML = hello("kushalll");
+</script>
